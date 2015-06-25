@@ -16,9 +16,21 @@ body {
 }
 
 .description {
-  margin: 16px 0 0 0;
   color: #4169e1;
-  font-size: 30px;
-  font-weight: bold;
   font-family: Inconsolata, Menlo, Consolas, monospace;
+  font-weight: bold;
+  margin: 16px 0 0 0;
+  font-size: 50px;
+}
+
+@media (max-width: 667px) {
+  .logo {
+    width: 256px;
+    height: 45px;
+  }
+
+  .description {
+    margin: 10px 0 0 0;
+    font-size: 28px;
+  }
 }
