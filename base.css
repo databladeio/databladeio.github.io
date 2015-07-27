@@ -1,36 +1,80 @@
-body {
-  background-color: #fafafa;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #212121;
+  font-size: 16px;
 }
 
-.content {
-  margin: 40px 0 0 0;
-  padding: 0;
-  text-align: center;
+body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .logo {
-  width: 512px;
-  height: 90px;
+  margin-bottom: 40px;
 }
 
-.description {
-  color: #4169e1;
-  font-family: Inconsolata, Menlo, Consolas, monospace;
-  font-weight: bold;
-  margin: 16px 0 0 0;
-  font-size: 50px;
+.content {
+  font-family: Inconsolata, monospace;
+  height: 100%;
+  color: #FFF;
+  margin: 0;
+  padding: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 600px;
 }
 
-@media (max-width: 667px) {
-  .logo {
-    width: 256px;
-    height: 45px;
-  }
+a {
+  color: #9E9E9E;
+}
 
-  .description {
-    margin: 10px 0 0 0;
-    font-size: 28px;
-  }
+a:hover {
+  color: #FFF;
+}
+
+label span {
+  margin-right: 8px;
+}
+
+input[type="email"] {
+  font-family: Inconsolata, monospace;
+  background-color: transparent;
+  color: #FFF;
+  font-size: 16px;
+  border-width: 0 0 2px 0;
+  border-color: #9E9E9E;
+  padding: 4px 8px;
+  outline: 0;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  font-family: Inconsolata, monospace;
+  border-radius: 0;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  color: #FFF;
+  padding: 4px 8px;
+  font-size: 16px;
+  outline: 0;
+  margin-left: 8px;
+  box-shadow: 2px 2px 0 0 #FFF;
+  -webkit-transform: translate(-2px, -2px);
+  transform: translate(-2px, -2px);
+}
+
+input[type="submit"]:active {
+  box-shadow: none;
+  -webkit-transform: none;
+  transform: none;
 }
