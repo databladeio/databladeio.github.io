@@ -46,6 +46,10 @@ a:hover {
   display: inline !important;
 }
 
+.sendgrid-subscription-widget div.response.success {
+  display: block !important;
+}
+
 label span {
   margin-right: 8px;
 }
