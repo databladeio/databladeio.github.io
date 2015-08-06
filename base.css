@@ -34,6 +34,15 @@ body {
   width: 600px;
 }
 
+.techstars {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.techstars-logo {
+  width: 165px;
+}
+
 a {
   color: #9E9E9E;
 }
