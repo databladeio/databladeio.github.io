@@ -13,8 +13,13 @@ body {
   justify-content: center;
 }
 
-.logo {
-  margin-bottom: 40px;
+div {
+  margin: 0;
+  padding: 0;
+}
+
+p, .sendgrid-subscription-widget {
+  margin: 0 0 16px 0;
 }
 
 .content {
@@ -34,9 +39,16 @@ body {
   width: 600px;
 }
 
+.logo {
+  margin: 0 0 20px 0;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
 .techstars {
   text-align: center;
-  margin: 20px 0 0 0;
 }
 
 .techstars-logo {
