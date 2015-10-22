@@ -2,109 +2,165 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #212121;
-  font-size: 16px;
+  background-color: #252525;
+  font-size: 12px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-body {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
 
 div {
   margin: 0;
   padding: 0;
 }
 
-p, .sendgrid-subscription-widget {
-  margin: 0 0 16px 0;
+
+.highlight {
+  color: #1994fb;
 }
 
-.content {
-  font-family: Inconsolata, monospace;
-  height: 100%;
-  color: #FFF;
+.header {
+  background-color: #252525;
+  font-size: 32px;
+  font-size: 3vw;
+  color: #fff;
   margin: 0;
-  padding: 0 20px;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  width: 600px;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  min-height: 50%;
+  max-height: 500px;
+  width: 100%;
+}
+
+.login {
+  align-self: flex-end;
+  margin: 25px 25px auto 0;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px;
+  font-size: 12px;
+  text-decoration:none;
+  flex: 0 0 auto;
+}
+
+.login:hover {
+  text-decoration:none;
+  color: #fff;
 }
 
 .logo {
-  margin: 0 0 20px 0;
-}
-
-.section {
+  flex: 0 0 auto;
+  min-width: 220px;
+  max-width: 600px;
+  width: 36%;
   margin-bottom: 20px;
 }
 
-.techstars {
-  text-align: center;
+.header .section {
+  margin-bottom: 20px;
 }
 
-.techstars-logo {
-  width: 165px;
+.header .section.formwrapper {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 75px;
+  margin-top: 20px;
 }
 
-a {
-  color: #9E9E9E;
+#sub-widget {
+  align-self: stretch;
+  opacity: 0;
+  transition: 500ms;
+  font-size: 12px;
+  padding: 0 15px;
+  min-height: 43px; /* based on the computed height of the form once it's rendered - needed to prevent "pop-in" effect */
 }
 
-a:hover {
-  color: #FFF;
+#sub-widget label span {
+  display: none;
 }
 
-.sendgrid-subscription-widget * {
-  display: inline !important;
+#sub-widget label {
+  flex: 0 2 250px;
+  margin: 0;
 }
 
-.sendgrid-subscription-widget div.response.success {
-  display: block !important;
+#sub-widget form {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
 }
 
-label span {
-  margin-right: 8px;
-}
-
-input[type="email"] {
-  font-family: Inconsolata, monospace;
-  background-color: transparent;
-  color: #FFF;
-  font-size: 16px;
-  border-width: 0 0 2px 0;
-  border-color: #9E9E9E;
-  padding: 4px 8px;
+#sub-widget input[type="email"] {
+  background-color: #FFF;
+  color: #000;
+  font-size: 12px;
+  border: 1px solid #000;
+  border-right: 0;
+  padding: 12px;
   outline: 0;
+  width: 100%;
   border-radius: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-input[type="submit"] {
+#sub-widget input[type="submit"] {
   cursor: pointer;
-  font-family: Inconsolata, monospace;
   border-radius: 0;
-  border: 1px solid #FFF;
-  background-color: transparent;
+  border: 1px solid #000;
+  border-left: 0;
+  background-color: #1994fb;
   color: #FFF;
-  padding: 4px 8px;
-  font-size: 16px;
+  padding: 12px 15px;
+  font-size: 12px;
   outline: 0;
-  margin-left: 8px !important;
-  box-shadow: 2px 2px 0 0 #FFF;
-  -webkit-transform: translate(-2px, -2px);
-  transform: translate(-2px, -2px);
+  margin: 0;
+  flex: 0 1 150px;
 }
 
-input[type="submit"]:active {
-  box-shadow: none;
-  -webkit-transform: none;
-  transform: none;
+#response {
+  font-size: 12px;
+  opacity: 0;
+  transition: 500ms;
+  min-height: 17px; /* based on computed height when this is rendered - needed to prevent "pop-in" effect */
+}
+
+.content {
+  background-color: #fff;
+  width: 100%;
+  padding: 30px 0;
+  border-bottom: 8px solid #1994fb;
+
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+  }
+}
+
+.content .section {
+  margin: auto;
+  background-color: #fff;
+  text-align: center;
+  max-width: 250px;
+}
+
+.content .section h2 {
+  color: #1994fb;
+  font-size: 20px;
 }

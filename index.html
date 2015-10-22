@@ -8,22 +8,57 @@
     <link rel="stylesheet" href="base.css">
   </head>
   <body>
-    <div class="content">
+    <div class="header">
+      <a href="https://app.datablade.io" class="login" role="button">SIGN IN</a>
       <img src="logo-light.png" srcset="logo-light@2x.png 2x" class="logo">
       <div class="section">
-        <p>Data insights without the overhead</p>
+        <span class="highlight">Data insights</span> without the overhead.
+      </div>
+      <div class="section formwrapper">
+        <div id="sub-widget" class="sendgrid-subscription-widget"
+        data-submit-text="GET STARTED"
+        data-messages="false"
+        data-css="false"
+        data-token="%2FbuDI8Ek3fK5Gcrg5%2FgOpWOvm50aPK1JUVHTSgLJK9sjV4cz0EYEXgFdSpOC4WZ%2FDmcHZddE87u3toeLsqA4vw%3D%3D">
+        </div>
+        <div id="response"></div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="section">
+        <h2>Access</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p>
       </div>
       <div class="section">
-        <p>Please subscribe to our mailing list to get all the latest updates:</p>
-        <div class="sendgrid-subscription-widget" data-token="%2FbuDI8Ek3fK5Gcrg5%2FgOpWOvm50aPK1JUVHTSgLJK9sjV4cz0EYEXgFdSpOC4WZ%2FDmcHZddE87u3toeLsqA4vw%3D%3D"></div><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://s3.amazonaws.com/subscription-cdn/0.2/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document, "script", "sendgrid-subscription-widget-js");</script>
-        <p>Contact us at <a href="mailto:founders@datablade.io">founders@datablade.io</a><p>
+        <h2>Analyze</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p>
       </div>
-      <div class="techstars">
-        <p>A <a href="http://www.geekwire.com/2015/meet-the-11-new-startups-in-techstars-seattle/">Techstars-backed</a> company</p>
-        <a href="http://www.techstars.com"><img src="techstars-logo@2x.png" srcset="techstars-logo@2x.png 2x" class="techstars-logo"></a>
+      <div class="section">
+        <h2>Automate</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p>
       </div>
     </div>
     <script>
+      (function() {
+        function setMessage(message) {
+          var el = document.getElementById('response');
+          if (el.style.opacity !== '0') {
+            el.style.opacity = 0;
+            setTimeout(function(){
+              el.innerHTML = message;
+              el.style.opacity = '1';
+            }, 500);
+          } else {
+            el.innerHTML = message;
+            el.style.opacity = '1';
+          }
+        }
+        var subWidget = document.getElementById('sub-widget');
+        subWidget.addEventListener('ready', function() { this.style.opacity = '1'; });
+        subWidget.addEventListener('error', function() { setMessage('Unfortunately, an error occurred. Please contact us to subscribe.'); });
+        subWidget.addEventListener('success', function() { setMessage('Thanks for subscribing.'); });
+      })();
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?"http":"https";if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://s3.amazonaws.com/subscription-cdn/0.2/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document, "script", "sendgrid-subscription-widget-js");
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
