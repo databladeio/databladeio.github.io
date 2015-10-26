@@ -1,13 +1,10 @@
 html, body {
-  display: flex;
-  flex-direction: column;
-
   height: 100%;
   margin: 0;
   padding: 0;
 
   font-family: "Roboto", -apple-system, "BlinkMacSystemFont", ".SFNSDisplay-Regular", "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 
   background-color: #252525;
 }
@@ -25,81 +22,74 @@ input {
   color: #1994fb;
 }
 
-.header {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: flex-end;
-  -webkit-align-items: center;
-  align-items: center;
-  justify-content: flex-end;
-  flex: 5 0 auto;
+.nav {
+  padding: 45px 110px;
 
-  width: 100%;
-  margin: 0;
-
-  font-size: 3vw;
-  font-weight: normal;
-
-  background-color: #252525;
-  color: #fff;
+  transition: 150ms;
 }
 
 .login {
-  flex: 0 0 auto;
-  align-self: flex-end;
+  float: right;
 
-  margin: 10px 10px auto 0;
-  padding: 8px;
-  border: 1px solid #fff;
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,0.5);
 
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: none;
+  font-weight: normal;
 
-  background-color: transparent;
+  background-color: rgba(255,255,255,0);
   color: #fff;
 
   transition: 150ms;
 }
 
 .login:hover, .login:focus {
-  background-color: white;
-  color: #333;
-  opacity: 0.8;
+  border: 1px solid rgba(255,255,255,1);
+
+  background-color: rgba(255,255,255,1);
+  color: #2d2d2d;
 
   cursor: pointer;
 }
 
-.logo {
-  flex: 0 0 auto;
+.header {
+  text-align: center;
 
-  width: 455px; /* TODO: Change on different media sizes */
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 60px 10px 50px 10px;
+
+  font-weight: normal;
+
+  background-color: #252525;
+  color: #fff;
 }
 
-.header .section {
-  margin-bottom: 20px;
+.logo {
+  width: 455px;
+  margin: 0 0 24px 0;
+
+  transition: 150ms;
+}
+
+.one-liner {
+  margin: 0 0 70px 0;
+
+  font-size: 40px;
+}
+
+.one-liner > span {
+  white-space: nowrap;
 }
 
 .header .section.formwrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-self: stretch;
-  align-items: center;
-
   min-height: 75px;
-  margin-top: 20px;
 }
 
 #sub-widget {
-  align-self: stretch;
-
   min-height: 43px; /* based on the computed height of the form once it's rendered - needed to prevent "pop-in" effect */
-  padding: 0 15px;
 
-  font-size: 12px;
+  font-size: 16px;
 
   opacity: 0;
 
@@ -111,6 +101,7 @@ input {
 }
 
 #sub-widget label {
+  -webkit-flex: 0 2 250px;
   flex: 0 2 250px;
 
   margin: 0;
@@ -123,35 +114,52 @@ input {
 }
 
 #sub-widget input[type="email"] {
+  flex: 0 1 auto;
+
   box-sizing: border-box;
 
   width: 100%;
   margin: 0;
-  padding: 12px;
+  padding: 14px 24px;
   border: 1px solid #000;
   border-right: 0;
   border-radius: 0;
   outline: 0;
 
-  font-size: 12px;
-  background-color: #FFF;
-  color: #000;
+  font-size: 16px;
+  background-color: #fff;
+  color: #2d2d2d;
+}
+
+::-webkit-input-placeholder {
+   color: #bbb;
+}
+::-moz-placeholder {
+   color: #bbb;
+}
+:-ms-input-placeholder {
+   color: #bbb;
+}
+::-input-placeholder {
+  color: #bbb;
 }
 
 #sub-widget input[type="submit"] {
-  flex: 0 1 150px;
+  -webkit-appearance: none;
+
+  flex: 0 1 auto;
 
   margin: 0;
-  padding: 12px 15px;
+  padding: 14px 28px;
   border: 1px solid #000;
   border-left: 0;
   border-radius: 0;
   outline: 0;
 
-  font-size: 12px;
+  font-size: 16px;
 
   background-color: #1994fb;
-  color: #FFF;
+  color: #fff;
 
   cursor: pointer;
 }
@@ -170,7 +178,7 @@ input {
   display: -webkit-flex;
   display: flex;
   flex: 3 0 auto;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
 
   width: 100%;
@@ -178,20 +186,13 @@ input {
   border-bottom: 8px solid #1994fb;
 
   background-color: #fff;
-}
-
-@media (min-width: 768px) {
-  .content {
-    flex-direction: row;
-  }
-  .login {
-    margin: 25px 25px auto 0;
-  }
+  color: #2d2d2d;
 }
 
 .content .section {
   max-width: 250px;
   margin: 20px auto;
+  padding: 0 12px;
 
   text-align: center;
 
@@ -209,4 +210,85 @@ input {
 
 .content .section p {
   margin: 0;
+}
+
+/* 570 480 */
+
+@media (max-width: 1000px) {
+  .nav {
+    padding: 45px 80px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav {
+    padding: 45px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 45px 45px;
+  }
+
+  .logo {
+    width: 355px;
+  }
+
+  .one-liner {
+    font-size: 36px;
+  }
+
+  .login {
+    padding: 8px 12px;
+    border: 1px solid rgba(255,255,255,0.5);
+
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 570px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 315px;
+  }
+
+  .one-liner {
+    font-size: 32px;
+  }
+
+  .one-liner > span {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 25px 25px;
+  }
+
+  .header {
+    padding: 90px 10px 70px 10px;
+  }
+
+  .logo {
+    width: 255px;
+    margin: 0 0 12px 0;
+  }
+
+  .one-liner {
+    font-size: 28px;
+  }
+
+  #sub-widget form {
+    display: block;
+    padding: 0 30px;
+  }
+
+  #sub-widget input[type="email"] {
+    margin-bottom: 20px;
+  }
 }
