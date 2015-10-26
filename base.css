@@ -118,12 +118,16 @@ input {
 }
 
 #sub-widget form {
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-self: stretch;
   align-self: stretch;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
 #sub-widget input[type="email"] {
+  -webkit-flex: 0 1 auto;
   flex: 0 1 auto;
 
   box-sizing: border-box;
@@ -156,6 +160,8 @@ input {
 #sub-widget input[type="submit"] {
   -webkit-appearance: none;
 
+
+  -webkit-flex: 0 1 auto;
   flex: 0 1 auto;
 
   margin: 0;
@@ -192,8 +198,11 @@ input {
 .content {
   display: -webkit-flex;
   display: flex;
+  -webkit-flex: 3 0 auto;
   flex: 3 0 auto;
+  -webkit-flex-direction: row;
   flex-direction: row;
+  -webkit-justify-content: center;
   justify-content: center;
 
   padding: 30px 10px;
@@ -266,7 +275,9 @@ input {
 
 @media (max-width: 650px) {
   .content {
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-align-items: center;
     align-items: center;
   }
 
