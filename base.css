@@ -111,8 +111,8 @@ input {
 }
 
 #sub-widget label {
-  -webkit-flex: 0 2 250px;
-  flex: 0 2 250px;
+  -webkit-flex: 0 2 330px;
+  flex: 0 2 330px;
 
   margin: 0;
 }
