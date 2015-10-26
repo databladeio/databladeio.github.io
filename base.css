@@ -83,6 +83,8 @@ input {
   margin: 0 0 70px 0;
 
   font-size: 40px;
+
+  transition: 150ms;
 }
 
 .one-liner > span {
@@ -248,7 +250,7 @@ input {
   }
 
   .one-liner {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .login {
@@ -259,7 +261,7 @@ input {
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 600px) {
   .content {
     flex-direction: column;
   }
