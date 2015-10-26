@@ -1,12 +1,15 @@
 html, body {
+  display: flex;
+  flex-direction: column;
+
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #252525;
+
   font-family: "Roboto", -apple-system, "BlinkMacSystemFont", ".SFNSDisplay-Regular", "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   font-size: 12px;
-  display: flex;
-  flex-direction: column;
+
+  background-color: #252525;
 }
 
 div {
@@ -14,50 +17,64 @@ div {
   padding: 0;
 }
 
+input {
+  font: inherit;
+}
+
 .highlight {
   color: #1994fb;
 }
 
 .header {
-  background-color: #252525;
-  font-size: 32px;
-  font-size: 3vw;
-  color: #fff;
-  margin: 0;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-justify-content: flex-end;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-justify-content: flex-end;
   justify-content: flex-end;
-  width: 100%;
   flex: 5 0 auto;
+
+  width: 100%;
+  margin: 0;
+
+  font-size: 3vw;
+  font-weight: normal;
+
+  background-color: #252525;
+  color: #fff;
 }
 
 .login {
-  align-self: flex-end;
-  margin: 10px 10px auto 0;
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 8px;
-  font-size: 12px;
-  text-decoration:none;
   flex: 0 0 auto;
+  align-self: flex-end;
+
+  margin: 10px 10px auto 0;
+  padding: 8px;
+  border: 1px solid #fff;
+
+  font-size: 13px;
+  text-decoration: none;
+
+  background-color: transparent;
+  color: #fff;
+
+  transition: 150ms;
 }
 
-.login:hover {
-  text-decoration:none;
-  color: #fff;
+.login:hover, .login:focus {
+  background-color: white;
+  color: #333;
+  opacity: 0.8;
+
+  cursor: pointer;
 }
 
 .logo {
   flex: 0 0 auto;
-  min-width: 220px;
-  max-width: 600px;
-  width: 36%;
+
+  width: 455px; /* TODO: Change on different media sizes */
   margin-bottom: 20px;
 }
 
@@ -66,22 +83,27 @@ div {
 }
 
 .header .section.formwrapper {
-  align-self: stretch;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: center;
+
   min-height: 75px;
   margin-top: 20px;
 }
 
 #sub-widget {
   align-self: stretch;
-  opacity: 0;
-  transition: 500ms;
-  font-size: 12px;
-  padding: 0 15px;
+
   min-height: 43px; /* based on the computed height of the form once it's rendered - needed to prevent "pop-in" effect */
+  padding: 0 15px;
+
+  font-size: 12px;
+
+  opacity: 0;
+
+  transition: 500ms;
 }
 
 #sub-widget label span {
@@ -90,61 +112,72 @@ div {
 
 #sub-widget label {
   flex: 0 2 250px;
+
   margin: 0;
 }
 
 #sub-widget form {
-  align-self: stretch;
   display: flex;
+  align-self: stretch;
   justify-content: center;
 }
 
 #sub-widget input[type="email"] {
-  background-color: #FFF;
-  color: #000;
-  font-size: 12px;
+  box-sizing: border-box;
+
+  width: 100%;
+  margin: 0;
+  padding: 12px;
   border: 1px solid #000;
   border-right: 0;
-  padding: 12px;
-  outline: 0;
-  width: 100%;
   border-radius: 0;
-  margin: 0;
-  box-sizing: border-box;
+  outline: 0;
+
+  font-size: 12px;
+  background-color: #FFF;
+  color: #000;
 }
 
 #sub-widget input[type="submit"] {
-  cursor: pointer;
-  border-radius: 0;
+  flex: 0 1 150px;
+
+  margin: 0;
+  padding: 12px 15px;
   border: 1px solid #000;
   border-left: 0;
+  border-radius: 0;
+  outline: 0;
+
+  font-size: 12px;
+
   background-color: #1994fb;
   color: #FFF;
-  padding: 12px 15px;
-  font-size: 12px;
-  outline: 0;
-  margin: 0;
-  flex: 0 1 150px;
+
+  cursor: pointer;
 }
 
 #response {
-  font-size: 12px;
-  opacity: 0;
-  transition: 500ms;
   min-height: 17px; /* based on computed height when this is rendered - needed to prevent "pop-in" effect */
+
+  font-size: 12px;
+
+  opacity: 0;
+
+  transition: 500ms;
 }
 
 .content {
-  background-color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  flex: 3 0 auto;
+  flex-direction: column;
+  justify-content: space-around;
+
   width: 100%;
   padding: 30px 0;
   border-bottom: 8px solid #1994fb;
-  flex: 3 0 auto;
 
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  background-color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -157,13 +190,23 @@ div {
 }
 
 .content .section {
-  margin: auto;
-  background-color: #fff;
-  text-align: center;
   max-width: 250px;
+  margin: 20px auto;
+
+  text-align: center;
+
+  background-color: #fff;
 }
 
 .content .section h2 {
+  margin: 0 0 6px 0;
+
+  font-size: 30px;
+  font-weight: normal;
+
   color: #1994fb;
-  font-size: 20px;
+}
+
+.content .section p {
+  margin: 0;
 }
