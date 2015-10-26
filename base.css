@@ -3,8 +3,8 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #252525;
+  font-family: "Roboto", -apple-system, "BlinkMacSystemFont", ".SFNSDisplay-Regular", "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   font-size: 12px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   display: flex;
   flex-direction: column;
 }
