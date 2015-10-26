@@ -6,12 +6,16 @@ html, body {
   font-family: "Roboto", -apple-system, "BlinkMacSystemFont", ".SFNSDisplay-Regular", "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   font-size: 14px;
 
-  background-color: #252525;
+  background-color: #fff;
 }
 
 div {
   margin: 0;
   padding: 0;
+}
+
+a {
+  color: #1994fb;
 }
 
 input {
@@ -25,6 +29,8 @@ input {
 .nav {
   padding: 45px 110px;
 
+  background-color: #252525;
+
   transition: 150ms;
 }
 
@@ -33,6 +39,7 @@ input {
 
   padding: 6px 10px;
   border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 0;
 
   font-size: 14px;
   text-decoration: none;
@@ -45,10 +52,10 @@ input {
 }
 
 .login:hover, .login:focus {
-  border: 1px solid rgba(255,255,255,1);
+  border: 1px solid #1994fb;
 
   background-color: rgba(255,255,255,1);
-  color: #2d2d2d;
+  color: #1994fb;
 
   cursor: pointer;
 }
@@ -87,7 +94,8 @@ input {
 }
 
 #sub-widget {
-  min-height: 43px; /* based on the computed height of the form once it's rendered - needed to prevent "pop-in" effect */
+  min-height: 50px; /* based on the computed height of the form once it's rendered - needed to prevent "pop-in" effect */
+  margin: 0 0 20px 0;
 
   font-size: 16px;
 
@@ -121,14 +129,13 @@ input {
   width: 100%;
   margin: 0;
   padding: 14px 24px;
-  border: 1px solid #000;
-  border-right: 0;
+  border: 0;
   border-radius: 0;
   outline: 0;
 
   font-size: 16px;
   background-color: #fff;
-  color: #2d2d2d;
+  color: #333;
 }
 
 ::-webkit-input-placeholder {
@@ -150,9 +157,8 @@ input {
   flex: 0 1 auto;
 
   margin: 0;
-  padding: 14px 28px;
-  border: 1px solid #000;
-  border-left: 0;
+  padding: 11px 27px;
+  border: 2px solid #1994fb;
   border-radius: 0;
   outline: 0;
 
@@ -162,12 +168,19 @@ input {
   color: #fff;
 
   cursor: pointer;
+
+  transition: 150ms;
+}
+
+#sub-widget input[type="submit"]:hover, #sub-widget input[type="submit"]:focus {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 1);
+    color: #1994fb;
 }
 
 #response {
-  min-height: 17px; /* based on computed height when this is rendered - needed to prevent "pop-in" effect */
+  min-height: 22px; /* based on computed height when this is rendered - needed to prevent "pop-in" effect */
 
-  font-size: 12px;
+  font-size: 16px;
 
   opacity: 0;
 
@@ -183,10 +196,9 @@ input {
 
   width: 100%;
   padding: 30px 0;
-  border-bottom: 8px solid #1994fb;
 
   background-color: #fff;
-  color: #2d2d2d;
+  color: #333;
 }
 
 .content .section {
