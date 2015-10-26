@@ -213,6 +213,10 @@ input {
   background-color: #fff;
 }
 
+.icon {
+  margin: 0 0 10px 0;
+}
+
 .content .section h2 {
   margin: 0 0 6px 0;
 
