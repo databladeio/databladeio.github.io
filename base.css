@@ -126,7 +126,8 @@ input {
   justify-content: center;
 }
 
-#sub-widget input[type="email"] {
+#sub-widget input[type="email"],
+#sub-widget input[type="text"] {
   -webkit-flex: 0 1 auto;
   flex: 0 1 auto;
 
