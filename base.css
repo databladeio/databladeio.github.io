@@ -239,6 +239,12 @@ input {
   margin: 0;
 }
 
+.footer {
+  display: block;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
 /* 570 480 */
 
 @media (max-width: 1000px) {
