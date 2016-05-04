@@ -51,6 +51,30 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         background-position: center;
         min-height: 180px;
       }
+
+      .one-liner > span {
+        white-space: normal;
+      }
+
+      .content .section {
+        margin: 0 10px;
+      }
+
+      @media (max-width: 650px) {
+        .header {
+          min-height: 120px;
+        }
+
+        .content {
+          -webkit-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+        }
+
+        .section.formwrapper {
+          padding: 0;
+          margin: 0;
+        }
+      }
     </style>
     <div class="header">
       <img src="logo-light.png" srcset="logo-light@2x.png 2x" class="logo">
