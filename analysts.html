@@ -144,6 +144,7 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         subWidget.addEventListener('error', function() { setMessage('Oops! That didn\'t work. Please email us at <a href="mailto:founders@datablade.io">founders@datablade.io</a> to sign up.'); });
         subWidget.addEventListener('success', function() {
           fbq('track', "Lead");
+          ga('send', 'event', 'Lead', 'Email', 'Analysts');
           setMessage('Thanks for your interest! We\'ll be in touch shortly.');
         });
       })();
