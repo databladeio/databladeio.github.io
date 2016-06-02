@@ -123,6 +123,8 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
       <p>DataBlade is a Techstars company</p>
     </div>
 
+    <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+
     <script>
       (function() {
         function setMessage(message) {
@@ -144,6 +146,9 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         subWidget.addEventListener('success', function() {
           fbq('track', "Lead");
           ga('send', 'event', 'Lead', 'Email', 'Excel');
+          window.google_trackConversion({
+            google_conversion_id: 924431434
+          });
           setMessage('Thanks for your interest! We\'ll be in touch shortly.');
         });
       })();
