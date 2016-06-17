@@ -22,15 +22,22 @@ input {
   font: inherit;
 }
 
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
 .highlight {
   color: #1994fb;
 }
 
 .nav {
-  padding: 45px 110px;
-
-  background-color: #252525;
-
+  padding: 20px 0;
   transition: 150ms;
 }
 
@@ -43,7 +50,6 @@ input {
 
   font-size: 16px;
   text-decoration: none;
-  font-weight: normal;
 
   background-color: rgba(255,255,255,0);
   color: #fff;
@@ -65,8 +71,6 @@ input {
 
   margin: 0;
   padding: 60px 10px 50px 10px;
-
-  font-weight: normal;
 
   background-color: #252525;
   color: #fff;
@@ -239,30 +243,15 @@ input {
   margin: 0;
 }
 
-.footer {
-  display: block;
-  text-align: center;
-  padding-bottom: 30px;
-}
-
 /* 570 480 */
 
 @media (max-width: 1000px) {
-  .nav {
-    padding: 45px 80px;
-  }
 }
 
 @media (max-width: 900px) {
-  .nav {
-    padding: 45px 60px;
-  }
 }
 
 @media (max-width: 768px) {
-  .nav {
-    padding: 45px 45px;
-  }
 
   .logo {
     width: 355px;
@@ -302,10 +291,6 @@ input {
 }
 
 @media (max-width: 480px) {
-  .nav {
-    padding: 25px 25px;
-  }
-
   .header {
     padding: 90px 10px 70px 10px;
   }
