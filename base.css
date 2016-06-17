@@ -22,6 +22,10 @@ input {
   font: inherit;
 }
 
+h2, strong {
+  font-weight: normal;
+}
+
 .cf:before,
 .cf:after {
     content: " "; /* 1 */
@@ -234,7 +238,6 @@ input {
   margin: 0 0 6px 0;
 
   font-size: 30px;
-  font-weight: normal;
 
   color: #1994fb;
 }
