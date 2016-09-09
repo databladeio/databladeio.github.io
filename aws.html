@@ -50,14 +50,20 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         background-image: url("analysts.jpg");
         background-repeat: no-repeat;
         background-position: center;
-        min-height: 300px;
-        padding: 0 100px 50px 100px;
+        min-height: 260px;
+        padding: 0 100px 40px 100px;
+      }
+
+      .logo-stripe > * {
+        display: inline-block;
+        vertical-align: middle;
       }
 
       .plus {
         white-space: normal;
         font-weight: 100;
         font-size: 80px;
+        padding: 0 40px;
       }
 
       .content .section {
@@ -106,6 +112,21 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         margin-left: 4px;
       }
 
+      .signup-button {  margin: 0;
+        text-decoration: none;
+        padding: 11px 27px;
+        border: 2px solid #1994fb;
+        border-radius: 0;
+        outline: 0;
+
+        font-size: 16px;
+
+        background-color: #1994fb;
+        color: #fff;
+        margin: 10px 0 10px 0;
+        display: inline-block;
+      }
+
       #intro-video {
         height: 360px;
         width: 640px;
@@ -146,9 +167,15 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         float: left;
       }
 
+      @media (max-width: 1200px) {
+        .plus {
+          display: block;
+        }
+      }
+
       @media (max-width: 650px) {
         .header {
-          padding: 10px;
+          padding: 10px 10px 30px 10px;
         }
 
         .section.formwrapper {
@@ -178,15 +205,12 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         <a href="https://app.datablade.io" class="login" role="button">LOG IN</a>
       </div>
 
-      <img src="logo-light.png" srcset="logo-light@2x.png 2x" class="logo">
-      <div class="section plus">
-        +
-      </div>
-      <img src="aws-logo.png" srcset="aws-logo@2x.png 2x" class="logo">
-      <div class="header-actions">
-        <a class="button watch-video" data-featherlight="<iframe id='intro-video' src='https://www.youtube.com/embed/ZGJs2nlZA0Y' frameborder='0' allowfullscreen></iframe>
-">WATCH THE VIDEO <i class="fa fa-play-circle" aria-hidden="true"></i></a>
-        <a class="button try" href="https://app.datablade.io/users/register/aws">TRY DATABLADE FOR FREE</a>
+      <div class="logo-stripe">
+        <img src="logo-light.png" srcset="logo-light@2x.png 2x" class="logo">
+        <div class="section plus">
+          +
+        </div>
+        <img src="aws-logo.png" srcset="aws-logo@2x.png 2x" class="logo">
       </div>
     </div>
     <style>
@@ -198,32 +222,26 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
     </style>
     <div class="content">
       <div class="section">
-        <h2>Centralized Data Management</h2>
+        <h2>Get All Your Data into Quicksight</h2>
         <h2>No Coding Required</h2>
         <p>
-          <a href="aws-flow.png" data-featherlight="image"><img src="aws-flow.png" width="100%" style="padding: 0 20px; box-sizing: border-box"></a>
+          <a href="qs-flow.png" data-featherlight="image"><img src="qs-flow.png" width="100%" style="padding: 0 20px; box-sizing: border-box"></a>
         </p>
         <p>
-            Whether it's for ad-hoc reporting or defining custom data feeds for AWS, DataBlade provides organizations a simple solution for centrally managing all your data without any coding.
+            Want to use AWS QuickSight, but don't have the engineers to build a custom data pipeline? DataBlade enables you to define completely automated, custom data feeds from your data sources into QuickSight without a single line of code.
         </p>
       </div>
       <div class="section">
-        <h2>Custom Data Feeds in Minutes</h2>
+        <h2>Start Your Free Trial Now!</h2>
         <p>
-          Use our intuitive, drag-and-drop interface to define custom data feeds and reports. Mix and match data from different sources with our joining features. And for our advanced users, leverage the power of SQL to clean, manipulate, and filter your results.
+          Enjoy a free 30 day trial of DataBlade and have your first data feeds running in minutes.
         </p>
         <p>
-          <a href="excel-screen.png" data-featherlight="image"><img src="excel-screen.png" width="100%" style="padding: 0 20px; box-sizing: border-box"></a>
+          <a class="signup-button" href="https://app.datablade.io/users/register/aws">Start Now!</a>
         </p>
-      </div>
-      <div class="section">
-        <h2>One-Click Scheduling</h2>
-        <p>
-          <a href="schedule.png" data-featherlight="image"><img src="schedule.png" width="100%" style="padding: 0 20px; box-sizing: border-box; border: 1px solid #ccc;"></a>
-        </p>
-        <p>
-          Never waste time manually updating your data again. Build it once and click to automate, no cron or coding required.
-        </p>
+        <h3>Want to Learn More?</h3>
+        <p>Visit our <a href="http://datablade.io">website</a> or watch our overview video below.</p>
+        <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZGJs2nlZA0Y" frameborder="0" allowfullscreen style="padding-bottom: 10px"></iframe>
       </div>
     </div>
     <div class="footer cf">
