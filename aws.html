@@ -51,7 +51,7 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         background-repeat: no-repeat;
         background-position: center;
         min-height: 260px;
-        padding: 0 100px 40px 100px;
+        padding: 0 80px 20px 80px;
       }
 
       .logo-stripe > * {
@@ -66,50 +66,14 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         padding: 0 40px;
       }
 
-      .content .section {
-        margin: 0 10px;
+      .inline-logo {
+        width: 350px;
       }
 
       .highlight {
         font-weight: 400;
         padding: 6px;
         background-color: rgba(255, 255, 255, 0.85)
-      }
-
-      a.button, button {
-        font-family: Roboto;
-        font-weight: 100;
-        box-sizing: border-box;
-        display: inline-block;
-      }
-
-      .header-actions a {
-        margin: 0 20px;
-        padding: 12px 16px;
-        background-color: #1994fb;
-        color: #fff;
-        border: 0;
-        cursor: pointer;
-        font-size: 18px;
-        text-decoration: none;
-
-      }
-
-      .header-actions a.watch-video {
-        background-color: rgba(0, 0, 0, 0.3);
-        border: 2px solid #fff;
-      }
-
-      .header-actions a.try {
-        font-weight: 400;
-      }
-
-      .header-actions a i {
-        font-size: 30px;
-        line-height: 0;
-        position: relative;
-        top: 4px;
-        margin-left: 4px;
       }
 
       .signup-button {  margin: 0;
@@ -123,18 +87,20 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
 
         background-color: #1994fb;
         color: #fff;
-        margin: 10px 0 10px 0;
-        display: inline-block;
+        display: block;
+        text-align: center;
+        transition: 150ms;
+      }
+
+      .signup-button:hover, .signup-button:focus {
+        color: #1994fb;
+        background-color: #fff;
+        border-color: #1994fb;
       }
 
       #intro-video {
         height: 360px;
         width: 640px;
-      }
-
-      .form-stripe {
-        padding: 30px 30%;
-        background-color: #ECEFF1;
       }
 
       .footer {
@@ -167,15 +133,44 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         float: left;
       }
 
-      @media (max-width: 1200px) {
-        .plus {
-          display: block;
-        }
+      .content .main-section {
+        max-width: 700px;
       }
 
-      @media (max-width: 650px) {
+      .content .trial-section {
+        min-width: 300px;
+      }
+
+      @media (max-width: 1000px) {
         .header {
-          padding: 10px 10px 30px 10px;
+          padding: 10px 30px 30px 30px;
+          min-height: 200px;
+        }
+
+        .plus {
+          font-size: 60px;
+        }
+
+        .content {
+          padding-top: 10px;
+          -webkit-flex-direction: column;
+          flex-direction: column;
+          -webkit-justify-content: center;
+          justify-content: center;
+        }
+
+        .content .main-section, .content .trial-section {
+          max-width: none;
+          min-width: 0;
+          margin-bottom: 0px;
+        }
+
+        .content h2 {
+          text-align: center;
+        }
+
+        .inline-logo {
+          width: 240px;
         }
 
         .section.formwrapper {
@@ -197,6 +192,17 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         .form-stripe, .footer {
           padding: 30px 22px;
         }
+
+      }
+
+      @media (max-width: 670px) {
+        .logo-stripe {
+          display: flex;
+          -webkit-flex-direction: column;
+          flex-direction: column;
+          -webkit-align-items: center;
+          align-items: center;
+        }
       }
     </style>
 
@@ -206,41 +212,35 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
       </div>
 
       <div class="logo-stripe">
-        <img src="logo-light.png" srcset="logo-light@2x.png 2x" class="logo">
+        <img src="logo-light.png" srcset="logo-light@2x.png 2x" class="inline-logo">
         <div class="section plus">
           +
         </div>
-        <img src="aws-logo.png" srcset="aws-logo@2x.png 2x" class="logo">
+        <img src="aws-logo.png" srcset="aws-logo@2x.png 2x" class="inline-logo">
       </div>
     </div>
     <style>
-      .content .section { text-align: left; max-width: 450px; }
+      .content .section { text-align: left; }
       .content .section p { margin: 15px 0; }
-      #sub-widget input[type="text"], #sub-widget input[type="email"] { border: 1px solid #ccc; margin-bottom: 10px; }
-      #sub-widget form { display: block; }
-      p { line-height: 1.3em; }
+      p { line-height: 1.35em; }
     </style>
     <div class="content">
-      <div class="section">
-        <h2>Get All Your Data into Quicksight</h2>
-        <h2>No Coding Required</h2>
+      <div class="section main-section">
+        <h2>Get All Your Data into QuickSight</h2>
         <p>
           <a href="qs-flow.png" data-featherlight="image"><img src="qs-flow.png" width="100%" style="padding: 0 20px; box-sizing: border-box"></a>
         </p>
         <p>
-            Want to use AWS QuickSight, but don't have the engineers to build a custom data pipeline? DataBlade enables you to define completely automated, custom data feeds from your data sources into QuickSight without a single line of code.
+            Want to use AWS QuickSight, but don't have the engineers to build a custom data pipeline? DataBlade enables you to define completely automated, custom data feeds from your data sources into QuickSight <em>without a single line of code</em>.
         </p>
       </div>
-      <div class="section">
-        <h2>Start Your Free Trial Now!</h2>
+      <div class="section trial-section">
+        <a class="signup-button" href="https://app.datablade.io/users/register/aws">Start Your Free Trial Now!</a>
         <p>
           Enjoy a free 30 day trial of DataBlade and have your first data feeds running in minutes.
         </p>
-        <p>
-          <a class="signup-button" href="https://app.datablade.io/users/register/aws">Start Now!</a>
-        </p>
-        <h3>Want to Learn More?</h3>
-        <p>Visit our <a href="http://datablade.io">website</a> or watch our overview video below.</p>
+
+        <p>Visit our <a href="http://datablade.io">website</a> to learn more or watch our overview video below.</p>
         <iframe width="100%" height="220" src="https://www.youtube.com/embed/ZGJs2nlZA0Y" frameborder="0" allowfullscreen style="padding-bottom: 10px"></iframe>
       </div>
     </div>
