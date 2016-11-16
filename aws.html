@@ -204,6 +204,11 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
       }
     </style>
 
+    <style>
+      #sub-widget input[type="text"], #sub-widget input[type="email"] { border: 1px solid #ccc; margin-bottom: 10px; }
+      #sub-widget form { display: block; }
+    </style>
+
     <div class="header">
       <div class="nav cf">
         <a href="https://app.datablade.io" class="login" role="button">LOG IN</a>
@@ -233,7 +238,18 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         </p>
       </div>
       <div class="section trial-section">
-        <a class="signup-button" href="https://app.datablade.io/users/register/aws">GET STARTED NOW</a>
+        <div>
+          <div
+            id="sub-widget"
+            class="sendgrid-subscription-widget"
+            data-submit-text="Request Your Free Trial"
+            data-messages="false"
+            data-css="false"
+            data-token="SD%2BOPR65g1qSfbgN47IeRB47rOCpqDICCHMA8pPc2WrC6cBHmFom1XlfntD1B5DF"
+          >
+          </div>
+          <div id="response"></div>
+        </div>
         <p>
           Enjoy a <em>free 30-day trial</em> of DataBlade and have your first data feeds running in minutes.
         </p>
@@ -283,7 +299,7 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         }
         var subWidget = document.getElementById('sub-widget');
         subWidget.addEventListener('ready', function() { this.style.opacity = '1'; });
-        subWidget.addEventListener('error', function() { setMessage('Oops! That didn\'t work. Please email us at <a href="mailto:founders@datablade.io">founders@datablade.io</a> to sign up.'); });
+        subWidget.addEventListener('error', function() { setMessage('Oops! That didn\'t work. Please email us at <a href="mailto:info@datablade.io">info@datablade.io</a> to request your trial.'); });
         subWidget.addEventListener('success', function() {
           fbq('track', "Lead");
           ga('send', 'event', 'Lead', 'Email', 'Analysts');
