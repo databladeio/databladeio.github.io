@@ -293,11 +293,13 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
         subWidget.addEventListener('ready', function() { this.style.opacity = '1'; });
         subWidget.addEventListener('error', function() { setMessage('Oops! That didn\'t work. Please email us at <a href="mailto:founders@datablade.io">founders@datablade.io</a> to sign up.'); });
         subWidget.addEventListener('success', function() {
-          fbq('track', "Lead");
-          ga('send', 'event', 'Lead', 'Email', 'Analysts');
-          window.google_trackConversion({
-            google_conversion_id: 924431434
-          });
+          try {
+            fbq('track', "Lead");
+            ga('send', 'event', 'Lead', 'Email', 'Analysts');
+            window.google_trackConversion({
+              google_conversion_id: 924431434
+            });
+          } catch(err) {}
           setMessage('Thanks for your interest! We\'ll be in touch shortly.');
         });
       })();
