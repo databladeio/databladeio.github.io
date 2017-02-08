@@ -314,7 +314,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .profiles .tier-features {
-  min-height: 220px;
+  min-height: 260px;
 }
 
 .profiles .term, .profiles .no-billing {
@@ -404,6 +404,10 @@ ul.features {
     min-height: 500px;
   }
 
+  .short-hero {
+    min-height: 400px;
+  }
+
   .bigscreen {
     padding-top: 20px;
     position: static;
@@ -421,10 +425,6 @@ ul.features {
 }
 
 @media (max-width: 767px) {
-  .short-hero {
-    min-height: 480px;
-  }
-
   .navbar-collapse {
     background-color: rgba(0, 0, 0, 0.85);
   }
@@ -443,8 +443,12 @@ ul.features {
     font-size: 30px;
   }
 
-  .hero h2 {
+  .hero h2, .hero h3 {
     font-size: 20px;
+  }
+
+  .profiles h2 {
+    font-size: 26px;
   }
 
   .aaa-container, .info-section, .vdc-container {
@@ -487,4 +491,15 @@ ul.features {
     flex: 0 1 auto;
   }
 
+  .profiles .tier-features {
+    min-height: 0;
+    margin-bottom: 40px;
+  }
+
+}
+
+@media (max-width: 374px) {
+  .short-hero {
+    min-height: 480px;
+  }
 }
