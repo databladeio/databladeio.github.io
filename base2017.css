@@ -13,14 +13,18 @@ a, a:hover, a:active, a:visited, a:focus {
   position: relative;
 }
 
+.stripe {
+  height: 100px;
+  background-color: #19619D;
+  text-align: center;
+  color: #fff;
+}
+
 .hero::before {
   content: "";
   background-image: url("analysts.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   opacity: 0.45;
   top: 0;
@@ -86,10 +90,6 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .short-hero h3 {
   line-height: 1.3em;
-}
-
-.short-hero::before {
-  background-image: url(".jpg");
 }
 
 .navbar-wrapper {
@@ -171,25 +171,30 @@ a, a:hover, a:active, a:visited, a:focus {
 .bigscreen {
   position: absolute;
   top: -240px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 
 .aaa-container, .bigscreen-container, .info-section, .vdc-container  {
-  display: -webkit-box;
   display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .aaa-container, .vdc-container {
   -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
 }
 
 .bigscreen-container, .info-section {
   -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -225,6 +230,14 @@ a, a:hover, a:active, a:visited, a:focus {
   width: 400px;
 }
 
+.info-section-img > img {
+  width: 100%;
+}
+
+.info-section {
+  margin-bottom: 20px;
+}
+
 .try {
   max-width: 600px;
 }
@@ -258,9 +271,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .footer {
-  display: -webkit-box;
   display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   color: #757575;
@@ -272,6 +283,8 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .footer .section {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
@@ -288,22 +301,50 @@ a, a:hover, a:active, a:visited, a:focus {
   margin-top: 10px;
 }
 
-.profiles h2 {
+.profiles h1, .profiles h2, .profiles h4, .profiles .term, .profiles .no-billing {
   text-align: center;
 }
 
+.profiles .price {
+  font-size: 60px;
+}
+
+.profiles .price-block {
+  height: 170px;
+}
+
+.profiles .tier-features {
+  min-height: 220px;
+}
+
+.profiles .term, .profiles .no-billing {
+  color: #757575;
+}
+
+.profiles .no-billing {
+  margin-top: 10px;
+}
+
+.profiles .cq {
+  margin-top: 40px;
+}
+
 .profiles-container {
-  display: -webkit-box;
   display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 20px 0;
 }
 
 .profiles-container .section {
+  -webkit-flex: 1 1 33%;
+  -ms-flex: 1 1 33%;
   flex: 1 1 33%;
   padding: 2px 40px 20px 40px;
   font-size: 16px;
@@ -314,6 +355,24 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .profiles-container .section:first-child {
   border: 0;
+}
+
+.profiles .start-now {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  background-color: transparent;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: normal;
+}
+
+.profiles .start-now:hover {
+  background-color: #4CAF50;
+  color: #fff;
+  border: 1px solid #4CAF50;
 }
 
 .profiles .learn {
@@ -337,6 +396,7 @@ ul.features {
   font-size: 16px;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-left: 30px;
 }
 
 @media (max-width: 950px) {
@@ -344,14 +404,14 @@ ul.features {
     min-height: 500px;
   }
 
-  .short-hero {
-    min-height: 400px;
-  }
-
   .bigscreen {
     padding-top: 20px;
-    position: relative;
-    top: 0;
+    position: static;
+    top: auto;
+    left: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
     width: 90%;
   }
 
@@ -361,6 +421,10 @@ ul.features {
 }
 
 @media (max-width: 767px) {
+  .short-hero {
+    min-height: 480px;
+  }
+
   .navbar-collapse {
     background-color: rgba(0, 0, 0, 0.85);
   }
@@ -384,6 +448,8 @@ ul.features {
   }
 
   .aaa-container, .info-section, .vdc-container {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -405,6 +471,8 @@ ul.features {
   }
 
   .footer, .profiles-container {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
