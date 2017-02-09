@@ -34,6 +34,10 @@ a, a:hover, a:active, a:visited, a:focus {
   position: absolute;
 }
 
+.so-hero::before {
+  background-image: url("twowomen.jpg");
+}
+
 .hero .container {
   position: absolute;
   top: 0;
