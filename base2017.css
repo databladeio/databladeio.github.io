@@ -7,7 +7,8 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .hero {
-  min-height: 700px;
+  /*min-height: 700px;*/
+  min-height: 500px;
   text-align: center;
   background-color: #1994fb;
   position: relative;
@@ -203,7 +204,8 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .aaa-container {
-  padding-top: 260px;
+  /*padding-top: 260px;*/
+  padding-top: 20px;
 }
 
 .vdc-container {
@@ -428,7 +430,8 @@ ul.features {
   }
 
   .aaa-container {
-    padding-top: 0;
+    /*padding-top: 0;*/
+    padding-top: 20px;
   }
 }
 
@@ -466,7 +469,8 @@ ul.features {
   }
 
   .aaa-container, .info-section {
-    padding-top: 0;
+    /*padding-top: 0;*/
+    padding-top: 20px;
   }
 
   .info-section-img {
