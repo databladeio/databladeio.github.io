@@ -91,6 +91,15 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
       </div>
     </div>
 
+    <div class="gray-container">
+      <div class="try">
+        <h3>Join Our Upcoming Sales Ops Webinar</h3>
+        <p>Learn how to use DataBlade to supercharge your sales ops workflow.</p>
+        <p><strong>February 27th, 2017</strong> at <strong>4PM ET</strong></p>
+        <a class="button" href="#" onclick="openWebinar(true); return false;">REGISTER NOW</a>
+      </div>
+    </div>
+
     <div class="info-section container">
       <div>
         <h3>Feature Highlights</h3>
@@ -178,5 +187,32 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
     <script src="https://cdn.rawgit.com/databladeio/featherlight/df4ca287/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </script>
+
+    <script>
+      function openModal() {
+        if (document.getElementsByClassName("mc-banner").length > 0) {
+          document.getElementsByClassName("mc-banner")[0].style.visibility = 'hidden';
+          document.getElementsByClassName("mc-modal")[0].style.visibility = 'visible';
+          document.getElementsByClassName("mc-modal-bg")[0].style.visibility = 'visible';
+          clearInterval(window.modalTimer);
+        }
+      }
+
+      function openWebinar(forceOpen) {
+        document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        require(["mojo/signup-forms/Loader"], function(L) {
+          // Check if already open
+          if (document.getElementsByClassName("mc-banner").length > 0) {
+            openModal();
+          } else {
+            L.start({"baseUrl":"mc.us15.list-manage.com","uuid":"423135af3cfda801aa5a17eec","lid":"bf373611e9"});
+            if (forceOpen) {
+              window.modalTimer = setInterval(openModal, 0);
+            }
+          }
+        });
+      }
+    </script>
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">openWebinar()</script>
   </body>
 </html>
