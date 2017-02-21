@@ -39,6 +39,10 @@ a, a:hover, a:active, a:visited, a:focus {
   background-image: url("twowomen.jpg");
 }
 
+.ca-hero::before {
+  background-image: url("cabg.jpg");
+}
+
 .hero .container {
   position: absolute;
   top: 0;
