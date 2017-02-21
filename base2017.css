@@ -40,7 +40,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .ca-hero::before {
-  background-image: url("cabg.jpg");
+  background-image: url("cabg2.jpg");
 }
 
 .hero .container {
@@ -237,7 +237,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .info-section-img {
   display: inline-block;
-  width: 400px;
+  width: 460px;
 }
 
 .info-section-img > img {
@@ -407,10 +407,15 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 ul.features {
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.5em;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 30px;
+}
+
+ul.features > li {
+  margin-bottom: 8px;
 }
 
 @media (max-width: 950px) {
