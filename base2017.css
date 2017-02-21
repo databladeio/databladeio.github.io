@@ -86,6 +86,7 @@ a, a:hover, a:active, a:visited, a:focus {
   border: 2px solid #fff;
   color: #1994fb;
   font-weight: normal;
+  margin-top: 10px;
 }
 
 .short-hero {
