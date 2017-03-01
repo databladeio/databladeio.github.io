@@ -43,6 +43,10 @@ a, a:hover, a:active, a:visited, a:focus {
   background-image: url("cabg2.jpg");
 }
 
+.subs-hero::before {
+  background-image: url("subshero.jpg");
+}
+
 .hero .container {
   position: absolute;
   top: 0;
@@ -263,7 +267,8 @@ a, a:hover, a:active, a:visited, a:focus {
   font-weight: 300;
 }
 
-.try .button {
+.try .button, #sub-widget input[type="submit"] {
+  border: 0;
   padding: 10px 20px;
   color: #fff;
   background-color: #1994fb;
@@ -417,6 +422,32 @@ ul.features {
 
 ul.features > li {
   margin-bottom: 8px;
+}
+
+#sub-widget input[type="text"], #sub-widget input[type="email"] {
+  border: 1px solid #ccc;
+  size: 16px;
+  padding: 10px;
+  font-weight: normal;
+  width: 250px;
+  height: 48px;
+}
+
+#sub-widget span {
+  display: none;
+}
+
+#sub-widget > form > label, #sub-widget > form > input {
+  vertical-align: middle;
+  margin: 0;
+}
+
+#sub-widget input[type="submit"] {
+  margin: 0;
+}
+
+#sub-widget form {
+  display: block;
 }
 
 @media (max-width: 950px) {
