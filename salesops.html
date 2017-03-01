@@ -91,13 +91,27 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
       </div>
     </div>
 
-    <div class="gray-container">
-      <div class="try">
-        <h3>Join Our Upcoming Sales Ops Webinar</h3>
-        <p>Learn how to use DataBlade to supercharge your sales ops workflow.</p>
-        <p><strong>March 13th, 2017</strong> at <strong>4PM ET</strong></p>
-        <a class="button" href="#" onclick="openWebinar(true); return false;">REGISTER NOW</a>
+    <style>
+    .doit {
+      font-size: 20px;
+    }
+    .doit-info {
+      max-width: 600px;
+    }
+    </style>
+
+    <div class="doit info-section gray-container">
+      <div class="doit-info">
+        <h3>We'll Do Your Sales Reports for You...Seriously!</h3>
+        <p>Getting started with automated Sales Ops on DataBlade couldn't be easier, because we'll do the work for you!</p>
+        <p>Just <a href="mailto:info@datablade.io?subject=Sales%20Ops%20Report%20Template">email us</a> your sales reporting template and we'll help kick things off by getting it automated on DataBlade for you, completely free.</p>
       </div>
+      <div style="text-align: center; margin: 20px;">
+        <a class="info-section-img" href="salesopsdiagram-noqs.png" data-featherlight="image"><img src="salesopsdiagram-noqs.png"></a>
+      </div>
+      <!-- <div style="text-align: center; margin: 20px;">
+        <a class="info-section-img" href="salesopsscreen.png" data-featherlight="image" style="width: 360px;"><img src="salesopsscreen.png"></a>
+      </div> -->
     </div>
 
     <div class="info-section container">
@@ -114,15 +128,6 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
       </div>
     </div>
 
-    <div class="profiles container">
-      <h2>See Sales Operations in Action</h2>
-    </div>
-
-    <div class="info-section container">
-      <a class="info-section-img" href="salesopsdiagram-noqs.png" data-featherlight="image"><img src="salesopsdiagram-noqs.png"></a>
-      <a class="info-section-img" href="salesopsscreen.png" data-featherlight="image"><img src="salesopsscreen.png"></a>
-
-    </div>
 
     <div class="gray-container">
       <div class="try">
@@ -187,33 +192,13 @@ src="https://www.facebook.com/tr?id=1664677683774469&ev=PageView&noscript=1"
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/databladeio/featherlight/df4ca287/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </script>
 
     <script>
-      function openModal() {
-        if (document.getElementsByClassName("mc-banner").length > 0) {
-          document.getElementsByClassName("mc-banner")[0].style.visibility = 'hidden';
-          document.getElementsByClassName("mc-modal")[0].style.visibility = 'visible';
-          document.getElementsByClassName("mc-modal-bg")[0].style.visibility = 'visible';
-          clearInterval(window.modalTimer);
-        }
-      }
-
-      function openWebinar(forceOpen) {
-        document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-        require(["mojo/signup-forms/Loader"], function(L) {
-          // Check if already open
-          if (document.getElementsByClassName("mc-banner").length > 0) {
-            openModal();
-          } else {
-            L.start({"baseUrl":"mc.us15.list-manage.com","uuid":"423135af3cfda801aa5a17eec","lid":"bf373611e9"});
-            if (forceOpen) {
-              window.modalTimer = setInterval(openModal, 0);
-            }
-          }
-        });
+      if ($(window).width() >= 768) {
+        setTimeout(function() {
+          $.featherlight($(".doit").clone().removeClass("gray-container"));
+        }, 2000);
       }
     </script>
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">openWebinar()</script>
   </body>
 </html>
